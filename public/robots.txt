@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+Sitemap: https://cristianporco.it/app/coda-condivisa-per-confronto-di-due-file-di-testo-riga-per-riga/sitemap.xml
