@@ -5,7 +5,10 @@ const $ = (sel) => document.querySelector(sel);
 const $$ = (sel) => document.querySelectorAll(sel);
 
 // ─── Socket.IO ─────────────────────────────────────────────────────────────────
-const socket = io();
+const socket = io({
+  // sub-path: il default '/socket.io' punta alla radice del dominio (404)
+  path: location.pathname.replace(/\/+$/, '') + '/socket.io',
+});
 
 // ─── State ─────────────────────────────────────────────────────────────────────
 let activePanel = 'compare';
